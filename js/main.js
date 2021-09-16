@@ -11,7 +11,7 @@ toggle.addEventListener('click', function(){
 window.onload = () => {
     new Masonry("#posts .grid",{
         itemSelector:'.grid-item',
-        gutter:18
+        gutter:20,
     })
     
 }

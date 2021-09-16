@@ -60,6 +60,9 @@ a{
     padding-top:20px;
     padding-bottom:20px;
 }
+.rounded-corners{
+    border-radius:4px;
+}
 
 /* global/colors */
 .text-light{
@@ -91,12 +94,18 @@ a{
 }
 .img-fluid{
     width:100%;
-    padding-left: 7px;
+    padding-left: 0px;
+    align-self: center;
 
 }
 .text-title{
     font-family: "DM Sans", sans-serif;
     font-weight:bold;
+}
+.text-title:hover{
+    font-family: "DM Sans", sans-serif;
+    font-weight:bold;
+    color:var(--primary-color)
 }
 .secondary-title{
     font-family: "Poppins", sans-serif;
@@ -106,7 +115,7 @@ a{
     font-size: 22px;
 }
 .display-2{
-    font-size: 16px;
+    font-size: 18px;
 }
 .display-3{
     font-size: 14px;
@@ -135,8 +144,15 @@ a{
     margin:0 auto;
 }
 .grid .grid-item{
+    border-radius: 1em;
+    border-top-left-radius: 1em;
     width:calc(33.333% - 20px);
     margin-bottom:3em;
+    align-self: center;
+    overflow:hidden;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .btn{
@@ -149,6 +165,9 @@ a{
 }
 .btn:hover{
     background-color: var(--primary-color);
+}
+.card{
+
 }
 /* .Main Styling. */
 
@@ -218,23 +237,12 @@ a{
 .col-3{
     flex:0 0 33.3333%;
     max-width: 33.3333%;
-    padding-right: 35px;
+    padding-right: 2em;
+    overflow:hidden;
     
 }
 
 @media(max-width: 1024px){
-
-    .row{
-        flex-wrap: wrap;
-        flex-direction: row;
-        
-}
-    .col-3{
-    flex:0 0 50%;
-    max-width: 50%;
-    padding-right: 18px;
-    
-}
 }
 
 
@@ -248,14 +256,15 @@ a{
     }
 }
 
+
 @media(max-width: 768px){
     .grid .grid-item{
         width: calc(50% - 18px);
+        align-self: center;
+
     }
-    .col-3{
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+    
+
 }
 
 
@@ -282,7 +291,22 @@ a{
     
     .grid .grid-item{
         width: calc(100% - 18px);
+        align-self: center;
     }
+    
+    .row{
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+    }
+    .col-3{
+    flex:0 0 100%;
+    max-width: 100%;
+    padding-right: 18px;
+    
+    }   
+    
+    
 }
 
 /* Footer */
@@ -294,6 +318,10 @@ a{
 }
 #footer .feature .flex-item{
    margin-bottom: 10px;
+   border-radius: 1em;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   padding: 0.5em;
+
 }
 
 .footer-contact-icon{
